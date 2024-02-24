@@ -1,17 +1,32 @@
-import './App.css';
-import image from './assets/images.jpeg';
-import image1 from './assets/images1.jpeg';
-import image2 from './assets/images2.jpeg';
-import image3 from './assets/images3.jpeg';
-import image4 from './assets/images4.jpeg';
+import { ImageSlider } from './ImageSlider';
+import img from './assets/img.jpg';
+import img1 from './assets/img1.jpg';
+import img2 from './assets/img2.jpg';
+import img3 from './assets/img3.jpg';
+import img4 from './assets/img4.jpg';
 
-const IMAGES = [image, image2, image3, image4]
+// alt tags just for demonstration purposes
+
+const IMAGES = [
+  { url: img, alt: "image" },
+  { url: img1, alt: "image one" },
+  { url: img2, alt: "image two" },
+  { url: img3, alt: "image three" },
+  { url: img4, alt: "image four" },
+]
 
 
 function App() {
 
   return (
-    <ImageSlider imageUrls={IMAGES} />
+    <div style={{
+      maxWidth: "1200px",
+      width: "100%",
+      aspectRatio: "10 / 6",
+      margin: "0 auto",
+    }}>
+      <ImageSlider images={IMAGES} />
+    </div>
   )
 }
 
